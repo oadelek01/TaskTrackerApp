@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Task Tracker</h1>
+</header>
+
+<div class="main-container">
+
+    <section>
+        <form id="taskForm">
+
+            <label for="taskTitle">Task Title</label>
+            <input type="text" id="taskTitle" required>
+
+            <label for="priority">Priority</label>
+            <select id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="dueDate">Due Date</label>
+            <input type="date" id="dueDate" min="1900-01-01" max="2099-12-31">
+
+            <button type="submit">Add Task</button>
+
+        </form>
+    </section>
+
+    <!-- Task Section -->
+    <section class="task-section">
+
+        <!-- Filter Buttons -->
+        <div class="filters" style="margin-bottom: 15px;">
+            <button id="allFilter">All</button>
+            <button id="activeFilter">Active</button>
+            <button id="completedFilter">Completed</button>
+        </div>
+
+        <!-- Task Counters -->
+        <div class="summary">
+            <p>Total Tasks: <span id="totalTasks">0</span></p>
+            <p>Completed Tasks: <span id="completedTasks">0</span></p>
+        </div>
+
+        <!-- Task List -->
+        <div id="taskList"></div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
